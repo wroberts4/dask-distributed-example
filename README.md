@@ -13,6 +13,9 @@ $ docker build -t dask-distributed dask-distributed-example
 $ docker run --rm -it -p 80:80 -p 1234:1234 dask-distributed python /cluster.py
 DASHBOARD: http://172.17.0.3:80/status
 SOCKET: tcp://172.17.0.3:1234
+```
+In another terminal:
+```
 $ docker run --rm -it -e SOCKET=tcp://172.17.0.3:1234 dask-distributed python /test.py
 ```
 
