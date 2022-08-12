@@ -16,7 +16,7 @@ def test_func(x):
     return x
 
 if __name__ == '__main__':
-    client = Client(f'127.0.0.1:{os.environ["PORT"]}')
+    client = Client(os.environ["SOCKET"])
     num_workers = len(client.scheduler_info()['workers'])
     input = np.arange(4 * num_workers)
 
