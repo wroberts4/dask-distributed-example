@@ -14,3 +14,5 @@ DASHBOARD: http://172.17.0.3:80/status
 SOCKET: tcp://172.17.0.3:1234
 $ docker run --rm -it -e SOCKET=tcp://172.17.0.3:1234 dask-distributed python /test.py
 ```
+
+![alt text](https://github.com/wroberts4/dask-distributed-example/blob/main/dashboard.png?raw=true)
