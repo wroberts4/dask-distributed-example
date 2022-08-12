@@ -1,5 +1,3 @@
-import xarray as xr
-import numpy as np
 import multiprocessing
 from dask import array as da
 import dask.bag as db
@@ -18,7 +16,7 @@ def test_func(x):
 if __name__ == '__main__':
     client = Client(os.environ["SOCKET"])
     num_workers = len(client.scheduler_info()['workers'])
-    input = np.arange(4 * num_workers)
+    input = range(4 * num_workers)
 
     start = time.time()
     with multiprocessing.Pool(num_workers) as p:
