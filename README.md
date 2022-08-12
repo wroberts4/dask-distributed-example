@@ -8,7 +8,8 @@ command prints for `tcp`. You can then go to localhost and a dashboard will appe
 When you run test.py, you will see dask stats in the plots.
 
 ```
-$ docker build -t dask-distributed .
+$ git clone https://github.com/wroberts4/dask-distributed-example.git
+$ docker build -t dask-distributed dask-distributed-example
 $ docker run --rm -it -p 80:80 -p 1234:1234 dask-distributed python /cluster.py
 DASHBOARD: http://172.17.0.3:80/status
 SOCKET: tcp://172.17.0.3:1234
